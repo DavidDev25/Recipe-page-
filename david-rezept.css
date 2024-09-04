@@ -1,0 +1,204 @@
+/* Hero-Section */
+#hero-food-picture {
+    padding: 32px 30px 8px;
+    display: flex;
+    justify-content: center;
+   } 
+
+.hero-food-wrapper {
+max-width: 1440px;
+width: 100%;
+display: flex;
+flex-direction: column;
+}
+
+#hero-food-picture h1 {
+padding-bottom: 16px;
+} 
+
+.hero-picture {
+width: 100%;
+height: 220px;
+object-fit: cover;
+border-radius: 10px;
+}
+
+.recipe-properties {
+padding: 16px 0;
+display: flex;
+gap: 16px;
+}
+
+.recipe-property {
+background-color: #efefef;
+padding: 6px 12px;
+border-radius: 8px;
+display: flex;
+gap: 8px;
+}
+
+.recipe-property span::before {
+    display: inline-block;
+    width: 16px;
+    position: relative;
+    right: 5px;
+    top: 3px;
+    padding: 0 7px;
+}
+
+.time span::before{
+    content: url('assets/img/icons/clock-regular.svg');
+}
+
+.level span::before{
+    content: url('assets/img/icons/brain-solid.svg');
+}
+
+.date span::before{
+    content: url('assets/img/icons/calendar-alt-regular.svg');
+}
+
+.recipe-property img {
+width: 16px;
+}
+
+/* zubereitungs section, ganz unten */
+#fooddescription {
+    padding: 32px 30px 8px;
+    display: flex;
+    justify-content: center;
+}
+
+#fooddescription h2{
+    text-align: left;
+}
+
+.fooddescription-wrapper {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.fooddescription-wrapper p {
+    text-align: justify;
+} 
+
+.recipe-creator {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 16px 0;
+}
+
+.recipe-creator img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Tabelle */
+#pelmeni-ingredients {
+    display: flex;
+    justify-content: center;
+}
+
+.ingredients-wrapper {
+    width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border-top: solid 1px #efefef;
+    padding-top: 10px;
+    margin: 20px 80px 0;
+    gap: 12px;
+}
+
+.ingredients-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ingredients-form span {
+    padding-right: 15px;
+}
+
+.ingredients-form input {
+    padding: 9px 2px;
+    font-size: 15px;
+    border-radius: 7px 0px 0px 7px;
+    border: solid 1.5px #efefef;
+    outline: none;
+    border-right: none;
+}
+
+.ingredients-form button {
+    background: #008000;
+    color: white;
+    padding: 9px 40px;
+    font-size: 16px;
+    border: solid 0.9px #008000;
+    cursor: pointer;
+}
+
+.ingredients-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.ingredients-table td {
+    padding: 16px 30px;
+}
+
+.ingredients-table tr:nth-child(odd) {
+    background: #efefef;
+}
+
+.ingredients-table td {
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    #hero-food-picture h1 {
+        text-align: center;
+        } 
+        .recipe-properties {
+            flex-direction: column;
+        }
+
+    #fooddescription h2{
+        text-align: center;
+    }
+
+    .recipe-creator {
+        flex-direction: column;
+    }
+    
+    .ingredients-wrapper {
+        margin: 20px 20px 0;
+    }
+    .ingredients-form {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+    .ingredients-table td {
+        text-align: center;
+    }
+    .ingredients-form input {
+        border-radius: 7px;
+        border-right: solid 1.5px #efefef;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .fooddescription-wrapper p {
+        text-align: left;
+    }
+}

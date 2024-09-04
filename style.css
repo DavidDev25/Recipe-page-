@@ -1,0 +1,401 @@
+html,
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: "RaleWay";
+}
+
+body {
+    /* nimmt 100% from Fiew-Point des Users */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@font-face {
+    font-family: "RaleWay";
+    src: url(./assets/fonts/Raleway-VariableFont_wght.ttf);
+}
+
+h1,
+h2 {
+    margin: 0;
+}
+
+.mg-top50 {
+    margin-top: 50px;
+}
+
+.text-next-to-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.button {
+    background-color: #008000;
+    color: white;
+    font-size: 18px;
+    padding: 12px 60px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 80px;
+    text-wrap: nowrap;
+}
+
+/* Navigationsbar */
+#navbar {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* .wrapper-navbar bestimmt die maximale Breite von 1440px; width=100% damit sich div alles an Platz nimmt,
+was es bekommen kann (entweder max. 1440px oder der vefügbare Platz -80px links & rechts wegen des paddings */
+.wrapper-navbar {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.wrapper-navbar img{
+    cursor: pointer;
+}
+
+
+#navbar img.logo {
+    width: 230px; /* Bild wird so kleiner, eventuell nochmal anpassen, sieht aber so erstmal gut aus finde ich */
+    margin: 16px 0 8px; /* damit das Logo einigermaßen ordentlich vertikal positioniert ist */
+}
+#menu-btn {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+}
+
+.menu-label {
+    background-image: url(./assets/img/speisekarte.png);
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 18px;
+    -webkit-transition: display 0.2s ease-in-out;
+    transition: display 0.2s ease-in-out;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+    padding-bottom: 7.2px; /* necessary for hover effect, see navbar-links a:hover > 4+3.2=7.2*/
+    border-bottom: solid 3.2px white;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active {
+    padding-bottom: 4px; /* so gibt es einen underline-effekt unterhalb der Texte, wie im mockup */
+    border-bottom: solid 3.2px #008000;
+    width: fit-content;
+    color: #008000;
+    transition: 125ms;
+} /* Farbe muss noch geändert werden sowie ggf. eine Transition einfügen */
+
+/* First Section with highlightes dish */
+#first-dish {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#first-dish .wrapper-headsection {
+    width: 1440px;
+    gap: 30px;
+    display: flex;
+    margin: 70px 30px;
+}
+
+#first-dish h1 {
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+#first-dish p {
+    font-size: 20px;
+    text-align: justify;
+}
+
+#first-dish img {
+    border-radius: 10px;
+    width: 470px;
+    object-fit: cover;
+}
+
+/* Maedeh - second and third section on landing page */
+.wrapper {
+    width: 1440px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+    padding: 0 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 90px;
+}
+
+#three-dishes-section {
+    display: flex;
+    justify-content: center;
+    background-color: #efefef;
+}
+
+#three-dishes-section .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+#three-dishes-section .item img {
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#three-dishes-section .item span {
+    font-weight: bold;
+}
+
+#wok-section {
+    display: flex;
+    justify-content: center;
+}
+
+#wok-section .container {
+    gap: 30px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#wok-section p {
+    text-align: justify;
+}
+
+#wok-section img {
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    object-fit: cover;
+    /* object fit damit Bild nicht verzerrt ist */
+}
+
+/* Lisa - Footer */
+
+footer {
+    background-color: #232323;
+    display: flex;
+    justify-content: center;
+    /*erstellt den Abstand automatisch zwischen Header und Footer für den Main Content der Website */
+    margin-top: auto;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 30px;
+    max-width: 1440px;
+    width: 100%;
+}
+
+.footer-first-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    filter: invert(100%);
+    width: 230px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-socials img {
+    width: 24px;
+    height: auto;
+}
+
+.footer-second-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 8px;
+    gap: 4px;
+}
+
+.footer-second-row a {
+    text-decoration: none;
+    color: #008000;
+}
+
+.footer-second-row a:hover {
+    /* text-decoration: none; */
+    color: #ffff;
+    transition: 125ms;
+}
+
+/* kontank-seite */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.contact-form {
+    background-color: #dcdcdc;
+    border-radius: 15px;
+    padding: 18px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    margin: 0 20px;
+}
+.contact-form h1 {
+    font-size: 30px;
+}
+.form-elements {
+    display: flex;
+    flex-direction: column;
+}
+.form-elements label {
+    font-size: 18px;
+    cursor: pointer;
+}
+.form-elements input {
+    border: 1px solid white;
+    border-radius: 8px;
+    height: 33px;
+    font-size: 16px;
+}
+.form-elements textarea {
+    font-family: "RaleWay";
+    border: 1px solid white;
+    border-radius: 8px;
+    height: 300px;
+    font-size: 16px;
+    resize: none;
+    padding: 5px;
+}
+.form-elements input:focus,
+.form-elements textarea:focus {
+    outline: none;
+    border: 1px solid #008000;
+    box-shadow: 0 0 1px #008000;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.button-wrapper button {
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 44px;
+    background-color: #008000;
+    color: white;
+    cursor: pointer;
+}
+
+/* Impressum */
+#impressum {
+    margin: 70px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#impressum h1, h2, h3 {
+    text-align: center;
+    max-width: 1440px;
+    width: 100%;
+}
+
+#impressum p {
+    text-align: justify;
+    max-width: 1440px;
+    width: 100%;
+}
+
+/* Datenschutz */
+#datenschutz {
+    margin: 70px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#datenschutz h1, h2, h3 {
+    text-align: center;
+    max-width: 1440px;
+    width: 100%;
+}
+
+#datenschutz p {
+    text-align: justify;
+    max-width: 1440px;
+    width: 100%;
+}
+
+#datenschutz ul, li {
+    text-align: justify;
+    max-width: 1440px;
+    width: 98%;
+}
+
+#datenschutz a {
+    text-decoration: none;
+    color: #008000;
+    font-weight: 600;
+}
+
+#datenschutz a:hover {
+    text-decoration: none;
+    color: #003d00;
+    transition: 125ms;
+}
+
+#datenschutz .index {
+    color: #008000;
+}
+

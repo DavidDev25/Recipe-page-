@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kochwelt&sup3;</title>
+    <link rel="icon" href="./assets/img/logo_small.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./responsive.css">
+    <link rel="stylesheet" href="./david-rezept.css">
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="a4aadfa6-cf4b-4326-a4b5-d93a75bcbcb4"
+        data-blockingmode="auto" type="text/javascript"></script>
+    <script src="./calculation.js"></script>
+</head>
+
+<script>
+/*
+    function recipeCalculator() {
+        let sourCreamOne = 1;
+        let vinegarOne = 1.5;
+        let saltOne = 0.5;
+        let herbsOne = 0.5;
+
+        let portionCount = document.getElementById("portion-count-input").value;
+
+        let sourCreamResult = portionCount * sourCreamOne;
+        let vinegarResult = portionCount * vinegarOne;
+        let saltResult = portionCount * saltOne;
+        let herbsResult = portionCount * herbsOne;
+
+        document.getElementById("sour-cream").innerHTML = sourCreamResult;
+        document.getElementById("vinegar").innerHTML = vinegarResult;
+        document.getElementById("salt").innerHTML = saltResult;
+        document.getElementById("herbs").innerHTML = herbsResult;
+    }
+
+</script>
+
+<body>
+    <!-- Header -->
+    <header id="navbar">
+        <div class="wrapper-navbar">
+            <a href="./index.html"><img class="logo" src="./assets/logo.png" /></a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-label" for="menu-btn"></label>
+            <div class="navbar-links">
+                <a href="index.html">Start</a>
+                <a href="./rezept-des-tages.html" class="active">Rezept des Tages</a>
+                <a href="contact.html" class="navbar-text">Kontakt</a>
+                <a href="impressum.html" class="navbar-text">Impressum</a>
+            </div>
+        </div>
+    </header>w
+
+    <!-- Hero-Section -->
+    <section id="hero-food-picture">
+        <div class="hero-food-wrapper">
+            <h1>Schmandsauce für Pelmeni</h1>
+            <img class="hero-picture" src="./assets/img/pelmeni-2023480_640.jpg" alt="croissant"/>
+            <div class="recipe-properties">
+                <div class="recipe-property time"><span>5 Min.</span></div>
+                <div class="recipe-property level"><span>simpel</span></div>
+                <div class="recipe-property date"><span>14.08.2024</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pelmeni-ingredients">
+        <div class="ingredients-wrapper">
+            <div class="ingredients-form">
+                <span>Zutaten für</span>
+                <input id="portion-count-input" type="number" min="1" value="1" oninput="validity.valid||(value='');">
+                <button onclick="recipeCalculator();">Portionen</button>
+            </div>
+            <table class="ingredients-table">
+                <tr>
+                    <td>
+                       <span id="sour-cream">1</span> Becher Schmand
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="vinegar">1.5</span> EL Weißweinessig
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="salt">0.5</span> TL, gestr. Salz 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="herbs">0.5</span> EL Kräuter, z. B. Schnittlauch, Petersilie, Zwiebeln, Knoblauch, TK
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        etwas Zucker
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        evtl. Chilipulver oder ein Peperoncino, fein gehackt
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+
+    <section id="fooddescription">
+        <div class="fooddescription-wrapper">
+            <h2> Zubereitung</h2>
+            <div class="recipe-properties">
+                <div class="recipe-property time">
+                    <span>ca. 5 Minuten</span>
+                </div>
+                <div class="recipe-property time">
+                    <span>Gesamtzeit ca. 15 Minuten</span>
+                </div>  
+            </div>
+            <p>Alles verrühren und abschmecken. <br><br>
+            Die Sauce passt perfekt zu russischen Pelmeni. Diese mache ich allerdings nicht selbst, sondern kaufe sie im gut sortierten oder russischen Supermarkt.</p>
+
+            <h2>Rezept erstellt von</h2>
+            <div class="recipe-creator">
+                <img src="./assets/img/David Werner.jpg"alt="picture-placeholder">
+                <span>David</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-first-row">
+                <a href="./index.html">
+                    <img class="footer-logo" src="./assets/logo.png" alt="Kochwelt">
+                </a>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/?locale=de_DE"><img src="./assets/img/Facebook_Logo_Secondary.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/"><img src="./assets/img/Instagram_Glyph_White.png" alt="Instagram"></a>
+                    <a href="https://www.tiktok.com/de-DE/"><img src="./assets/img/TikTok-Social-Icon-Circle-Mono-Black.png" alt="TikTok"></a>
+                </div>
+            </div>
+
+            <div class="footer-second-row">
+                <a href="./impressum.html">Impressum</a>
+                <a href="./datenschutz.html">Datenschutzerklärung</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
